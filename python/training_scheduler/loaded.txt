@@ -1,0 +1,15 @@
+C:\Users\garre\Documents\Pluralsight\practice\paths\LFCS\Linux Essentials\Piping & Redirection\STDOUT
+C:\Users\garre\Documents\Pluralsight\practice\python\files_and_resource_mgmt\appending_to_text_files.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\files_and_resource_mgmt\intro.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\files_and_resource_mgmt\reading_text_files.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\files_and_resource_mgmt\writing_text_files.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\dictionary_comprehension.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\filtering_predicates.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\generators.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\generator_comprehensions
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\iteration_protocols.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\itertools.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\laziness_infinite.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\list_comprehension.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\set_comprehension.txt
+C:\Users\garre\Documents\Pluralsight\practice\python\iterables\stateful_generation_functions"
