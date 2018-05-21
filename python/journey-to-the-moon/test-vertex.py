@@ -2,7 +2,7 @@
 from unittest import TestCase
 
 
-class TestVertices(TestCase):
+class TestVertex(TestCase):
 
     def test_using_lambda_in_vertices(self):
         vertices = [1, 2, 3, 4, 5]
