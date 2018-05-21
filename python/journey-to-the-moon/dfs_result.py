@@ -2,7 +2,6 @@
 
 
 class DfsResult:
-
     def __init__(self, visited, count):
         self._visited = visited
         self._count = count
@@ -22,3 +21,10 @@ class DfsResult:
     @count.setter
     def count(self, value):
         self._count = value
+
+    def is_visited(self, vertex):
+        result = list(filter(lambda v: v == vertex, self._visited))
+        if len(result) > 0:
+            return True
+        else:
+            return False
