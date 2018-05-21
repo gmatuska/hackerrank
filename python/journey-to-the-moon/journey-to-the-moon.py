@@ -1,65 +1,9 @@
 #!/usr/bin/python3
 import math
 
-
-class Graph:
-
-    def __init__(self):
-        self._edgeList = []
-
-    def add_edge(self, edge):
-        self._edgeList.append(edge)
-
-    @staticmethod
-    def vertices():
-        return []
-
-    def dfs(self):
-        counts = []
-        visited = []
-        for v in self.vertices():
-            if filter(lambda x: x == v.value, visited): continue
-            result = []  # self.dfs_inside(v, DfsResult(visited, 0))
-            visited = False  # result.IsVisited()
-            counts.append(len(result))
-
-    @staticmethod
-    def dfs_inside(vertex, result):
-        stack = [vertex.value()]
-        while len(stack) > 0:
-            stackVertex = stack.pop()
-            if filter(lambda v: v != stackVertex, result.visited()):
-                result.visited().append(stackVertex)
-                # len(result)
-
-
-class DfsResult:
-
-    def __init__(self, visited, count):
-        self._visited = visited
-        self._count = count
-
-    def visited(self):
-        return self._visited
-
-    def count(self):
-        return self._count
-
-
-class Vertex:
-
-    def __init__(self, value):
-        self._value = value
-
-    def value(self):
-        return self._value
-
-
-class Edge:
-
-    def __init__(self, vertexFrom, vertexTo):
-        self._vertexList = [vertexFrom, vertexTo]
-
+from edge import Edge
+from graph import Graph
+from vertex import Vertex
 
 if __name__ == '__main__':
     tokens = input().strip().split(' ')
