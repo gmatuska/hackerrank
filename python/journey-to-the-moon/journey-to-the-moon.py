@@ -11,8 +11,8 @@ if __name__ == '__main__':
     for _ in range(m):
         a, b = input().strip().split(' ')
         graph.add_edge({int(a), int(b)})
-    singletons = graph.vertices()
-    results = []  # graph.dfs()
+    singletons = graph.vertices
+    results = graph.dfs()
     combinations = 0
     for p in range(len(results)):
         for q in range(p+1, len(results)):

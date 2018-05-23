@@ -12,4 +12,4 @@ class TestGraph(TestCase):
         self.assertEqual({1, 2, 3, 4, 5}, result_set)
         self.assertEqual({2, 3, 4, 5}, result_set.symmetric_difference({1}))
         graph = Graph(edge_set)
-        self.assertEqual({2, 3, 4, 5}, graph.get_vertex_edges(1))
+        self.assertEqual({2, 3, 4, 5}, graph.get_vertex_edge_vertices(1))
