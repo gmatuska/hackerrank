@@ -11,7 +11,7 @@ class DfsResult:
         return self._visited
 
     def append_to_visited(self, value):
-        self._visited.append(value)
+        self._visited = self._visited.union({value})
 
     @property
     def count(self):
