@@ -4,4 +4,7 @@
 class Edge:
 
     def __init__(self, vertexFrom, vertexTo):
-        self._vertexList = [vertexFrom, vertexTo]
+        self._vertexSet = {vertexFrom, vertexTo}
+
+    def vertices(self):
+        return self._vertexSet

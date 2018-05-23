@@ -10,9 +10,8 @@ class DfsResult:
     def visited(self):
         return self._visited
 
-    @visited.setter
-    def visited(self, value):
-        self._visited = value
+    def append_to_visited(self, value):
+        self._visited.append(value)
 
     @property
     def count(self):
@@ -23,8 +22,4 @@ class DfsResult:
         self._count = value
 
     def is_visited(self, vertex):
-        result = list(filter(lambda v: v == vertex, self._visited))
-        if len(result) > 0:
-            return True
-        else:
-            return False
+        return True if len(list(filter(lambda v: v == vertex, self._visited))) > 0 else False

@@ -3,7 +3,6 @@ import math
 
 from edge import Edge
 from graph import Graph
-from vertex import Vertex
 
 if __name__ == '__main__':
     tokens = input().strip().split(' ')
@@ -12,7 +11,7 @@ if __name__ == '__main__':
     graph = Graph()
     for _ in range(m):
         a, b = input().strip().split(' ')
-        graph.add_edge(Edge(Vertex(int(a)), Vertex(int(b))))
+        graph.add_edge(Edge((int(a)), (int(b))))
     singletons = graph.vertices()
     results = []  # graph.dfs()
     combinations = 0
