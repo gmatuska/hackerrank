@@ -4,18 +4,21 @@
 
 class Graph:
 
-    def __init__(self):
-        self._edgeList = []
+    def __init__(self, edges=None):
+        if edges is None:
+            edges = []
+        self._edges = edges
 
     def add_edge(self, edge):
-        self._edgeList.append(edge)
+        self._edges.append(edge)
 
     @property
     def vertices(self):
         return []
 
+    """return vertices that have an edge with the given vertex"""
     def get_vertex_edges(self, vertex):
-        pass
+        return set().union(*self._edges).symmetric_difference({vertex})
 
     def dfs(self):
         counts = []
@@ -35,4 +38,4 @@ class Graph:
                 result.append_to_visited(stackVertex)
                 result.count += 1
                 """get the edges attached to the current vertex"""
-                # edges = filter(lambda v: v.value == stackVertex, self.vertices)
+                # edges = self.get_vertex_edges(stackVertex)

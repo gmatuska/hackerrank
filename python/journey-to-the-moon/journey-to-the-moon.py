@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import math
 
-from edge import Edge
 from graph import Graph
 
 if __name__ == '__main__':
@@ -11,7 +10,7 @@ if __name__ == '__main__':
     graph = Graph()
     for _ in range(m):
         a, b = input().strip().split(' ')
-        graph.add_edge(Edge((int(a)), (int(b))))
+        graph.add_edge({int(a), int(b)})
     singletons = graph.vertices()
     results = []  # graph.dfs()
     combinations = 0
