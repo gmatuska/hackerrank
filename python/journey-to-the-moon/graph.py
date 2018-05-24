@@ -7,11 +7,16 @@ class Graph:
 
     def __init__(self, edges=None):
         if edges is None:
-            edges = []
+            self._edges = []
         self._edges = edges
 
     def add_edge(self, edge):
-        self._edges.append(edge)
+        if edge not in self._edges:
+            self._edges.append(edge)
+
+    @property
+    def edges(self):
+        return self._edges
 
     @property
     def vertices(self):
