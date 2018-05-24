@@ -20,16 +20,16 @@ class Graph:
 
     @property
     def vertices(self):
-        return list(set().union(*self._edges))
+        return set().union(*self._edges)
 
     """return vertices that have an edge with the given vertex"""
     def get_vertex_edge_vertices(self, vertex):
-        return set().union(*self._edges).symmetric_difference({vertex})
+        return self.vertices.symmetric_difference({vertex})
 
     def dfs(self):
         counts = []
         visited = []
-        for v in self.vertices:
+        for v in list(self.vertices):
             if filter(lambda x: x == v, visited): continue
             result = self.dfs_inside(v, DfsResult(visited, 0))
             visited = result.visited

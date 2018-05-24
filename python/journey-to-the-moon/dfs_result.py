@@ -22,4 +22,4 @@ class DfsResult:
         self._count = value
 
     def is_visited(self, vertex):
-        return True if len(list(filter(lambda v: v == vertex, self._visited))) > 0 else False
+        return True if self._visited.intersection({vertex}) == {vertex} else False

@@ -12,11 +12,14 @@ class TestGraph(TestCase):
         graph = Graph(edge_set)
         self.assertEqual({2, 3, 4, 5}, graph.get_vertex_edge_vertices(1))
 
-    def test_add_edge(self):
-        edges = [{0, 1}, {1, 2}, {2, 2}]
+    def test_vertices(self):
+        edges = [{0, 1}]
+        graphs = []
         graph = Graph(edges)
-        graph.add_edge({2, 2})
-        self.assertEqual(3, len(graph.edges))
-        graph.add_edge({3, 2})
-        self.assertEqual(4, len(graph.edges))
+        graphs.append(graph)
+        x = 2
+        y = 3
+        print(graphs[0].vertices.intersection({x}) == {x})
+        print(graphs[0].vertices.intersection({y}) == {y})
+        print(graphs[0].vertices.intersection({x, y}) == {x, y})
 
