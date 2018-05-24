@@ -1,3 +1,4 @@
+from gettext import find
 from unittest import TestCase
 
 from graph import Graph
@@ -23,3 +24,12 @@ class TestGraph(TestCase):
         print(graphs[0].vertices.intersection({y}) == {y})
         print(graphs[0].vertices.intersection({x, y}) == {x, y})
 
+    def test_dfs(self):
+        visited = [0]
+        print(list(filter(lambda x: x == 0, visited)))
+        self.assertTrue(True)
+
+    def test_dfs_inside(self):
+        visited = set()
+        vertex = 0
+        self.assertTrue(visited.intersection({vertex}) == set())

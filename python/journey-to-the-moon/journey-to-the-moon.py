@@ -6,7 +6,8 @@ from graph import Graph
 
 def add_edge(graphList, x, y):
     """don't add edges that are singletons"""
-    if x == y: return graphList
+    if x == y:
+        return graphList
     index = 0
     added = False
     while index < len(graphList):
@@ -40,8 +41,8 @@ if __name__ == '__main__':
     for p in range(len(results)):
         for q in range(p + 1, len(results)):
             combinations += (results[p] * results[q])
-    combinations += math.sum(list(filter(lambda t: t * singletons, results)))
+    combinations += math.trunc(math.fsum(list(filter(lambda t: t * singletons, results))))
     """connect disjoint sets to themselves and aggregate combinations"""
-    for p in range(len(singletons) - 1, 0, -1):
+    for p in range(singletons - 1, 0, -1):
         combinations += p
     print(combinations)
