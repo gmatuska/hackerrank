@@ -43,6 +43,6 @@ if __name__ == '__main__':
             combinations += (results[p] * results[q])
     combinations += math.trunc(math.fsum(list(filter(lambda t: t * singletons, results))))
     """connect disjoint sets to themselves and aggregate combinations"""
-    for p in range(singletons - 1, 0, -1):
+    for p in range(singletons, 0, -1):
         combinations += p
     print(combinations)
