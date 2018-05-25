@@ -1,6 +1,4 @@
-from gettext import find
 from unittest import TestCase
-
 from graph import Graph
 
 
@@ -11,6 +9,7 @@ class TestGraph(TestCase):
         self.assertEqual({1, 2, 3, 4, 5}, result_set)
         self.assertEqual({2, 3, 4, 5}, result_set.symmetric_difference({1}))
         graph = Graph(edge_set)
+
         self.assertEqual({2, 3, 4, 5}, graph.get_vertex_edge_vertices(1))
 
     def test_vertices(self):
@@ -33,3 +32,18 @@ class TestGraph(TestCase):
         visited = set()
         vertex = 0
         self.assertTrue(visited.intersection({vertex}) == set())
+
+    def test_add_edge(self):
+        my_dict = {}
+        try:
+            my_dict[1].add(my_dict[1].union({5}))
+        except KeyError:
+            my_dict[1] = {5}
+        print(my_dict[1])
+        self.assertEqual({5}, my_dict[1])
+        my_dict[1] = my_dict[1].union({7})
+        print(my_dict[1])
+        self.assertEqual({5, 7}, my_dict[1])
+
+
+
